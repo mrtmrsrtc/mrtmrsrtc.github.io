@@ -75,8 +75,8 @@
             /*-------------------------------------------------------*/
             // if topojson file is imported we need to 
             // convert topology data to geojson 
-            console.log(topo_data.POP2010);
             const geojson = topojson.feature(topo_data, topo_data.objects.ma);
+            console.log(geojson);
 
             /*-------------------------------------------------------*/
             /*----------------------Projections----------------------*/

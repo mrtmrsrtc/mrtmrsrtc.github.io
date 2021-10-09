@@ -76,7 +76,6 @@
             // if topojson file is imported we need to 
             // convert topology data to geojson 
             const geojson = topojson.feature(topo_data, topo_data.objects.ma);
-            console.log(geojson);
             console.log(geojson.features[1]);
 
 
@@ -110,13 +109,13 @@
                 // if the data is scaled using log scale
             let logScale = d3.scaleLog()
                 .domain(d3.extent(geojson.features, (d) => {
-                    return d['properties']['POP2010']
+                    return d['properties']['POP1980']
                 }))
 
             // if the data is scaled using linear scale
             let linearScale = d3.scaleLinear()
                 .domain(d3.extent(geojson.features, (d) => {
-                    return d['properties']['POP2010']
+                    return d['properties']['POP1980']
                 }))
 
             /*-------------------------------------------------------*/
